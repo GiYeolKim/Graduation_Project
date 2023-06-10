@@ -1,6 +1,7 @@
 # SynthView Generator
-
+![image](https://github.com/agtmwebtoon/gachon-graduation-project/assets/50310635/cf6c089c-297e-49e1-a1dc-8f1e8fc5dfbb)
 This is a Flask application that allows users to upload videos and perform video processing tasks using the COLMAP and NeRF libraries. The processed videos can be downloaded by the users.
+
 ## Prerequisites
 
 Before running the application, ensure that you have the following dependencies installed:
