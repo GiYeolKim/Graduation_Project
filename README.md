@@ -103,5 +103,5 @@ He is responsible for coordinating the project, managing tasks, and ensuring tim
 ## Minhyung Lee
 
 He is responsible for designing and implementing the server-side logic of the application. He works on data processing, API development, and integration with external services.
-## Gio Kim
+## io Kim
 He is a skilled frontend developer who handles the user interface and client-side development of the application. He is responsible for creating responsive and user-friendly interfaces using HTML, CSS, and JavaScript frameworks.
