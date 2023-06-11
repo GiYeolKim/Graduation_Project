@@ -6,11 +6,13 @@ const trainingButton = document.getElementById('training');
 const dropContainer = document.getElementById('drop-container');
 const generatedVideo = document.getElementById('generated-video');
 const progressIndicator = document.getElementById('progress-indicator');
+const blurOverlay = document.getElementById('blur-overlay');
 generatedVideo.style.display = 'none';
 
 var video_URL = "";
 var file;
-
+blurOverlay.classList.add('hidden');
+blurOverlay.style.display = 'hidden';
 document.addEventListener('DOMContentLoaded', function() {
   var source = new EventSource("/stream");
   source.onmessage = function(event) {
@@ -71,19 +73,24 @@ dropZone.addEventListener('drop', (event) => {
 		videoImg.remove();
 
     }
-	else document.getElementById('drop-container').style.display = 'block';
+	else {
+		document.getElementById('drop-container').style.display = 'block';
+
+	}
 
 });
 
 function showProgressIndicator() {
   if (progressIndicator) {
     progressIndicator.style.display = 'block';
+	blurOverlay.classList.remove('hidden');
   }
 }
 
 function hideProgressIndicator() {
   if (progressIndicator) {
     progressIndicator.style.display = "none";
+	blurOverlay.classList.add('hidden');
   }
 }
 

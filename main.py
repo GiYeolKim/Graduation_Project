@@ -56,10 +56,10 @@ def run_subprocess(command):
 
 def training(path, name):
     # Function to perform training based on the uploaded video
-    run_subprocess(["python", "scripts/colmap2nerf.py", "--video_in", path + name,
+    subprocess.call(["python", "scripts/colmap2nerf.py", "--video_in", path + name,
                     "--video_fps", "2", "--aabb_scale", "16", "--overwrite"])
 
-    run_subprocess(["python", "scripts/colmap2nerf.py", "--colmap_matcher", "exhaustive", "--run_colmap",
+    subprocess.call(["python", "scripts/colmap2nerf.py", "--colmap_matcher", "exhaustive", "--run_colmap",
                     "--aabb_scale", "16", "--overwrite", "--images",
                     path + "images", "--out",
                     path + "/transforms.json", "--colmap_db", path + "colmap.db",
